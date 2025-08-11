@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: agro-calc-db
+  namespace: agro-calc-k8s
+spec:
+  type: ClusterIP
+  selector:
+    app: agro-calc-db
+  ports:
+    - name: postgres
+      port: 5432
+      targetPort: 5432

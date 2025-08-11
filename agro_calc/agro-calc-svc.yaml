@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: agro-calc
+  namespace: agro-calc-k8s
+spec:
+  selector: { app: agro-calc }
+  type: LoadBalancer
+  ports:
+    - port: 3000
+      targetPort: 3000
