@@ -18,6 +18,12 @@ spec:
           ports:
             - containerPort: 5432
           env:
+            - name: POSTGRES_USER
+              valueFrom:
+                secretKeyRef:
+                  name: agro-calc-env
+                  key: POSTGRES_USER
+                  optional: true
             - name: POSTGRES_DB
               value: "agro_calc_db"
             - name: POSTGRES_PASSWORD
