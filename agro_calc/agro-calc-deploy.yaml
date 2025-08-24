@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
         - name: agro-calc
-          image: ghcr.io/bozhidar-a/agro_calc:a75c19e # {"$imagepolicy": "flux-system:agro-calc"}
+          image: ghcr.io/bozhidar-a/agro_calc:d4226fe # {"$imagepolicy": "flux-system:agro-calc"}
           imagePullPolicy: Always
           ports:
             - containerPort: 3000
