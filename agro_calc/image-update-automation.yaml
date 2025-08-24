@@ -19,7 +19,7 @@ spec:
       messageTemplate: |
         chore(images): update
         {{- range .Updated.Images }}
-        - {{ .Name }} -> {{ .Tag }} ({{ .Digest }})
+        - {{ .Name }} -> {{ .NewImage }} ({{ .NewDigest }})
         {{- end }}
     push:
       branch: main
