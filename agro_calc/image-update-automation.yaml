@@ -10,7 +10,8 @@ spec:
     name: flux-system
   git:
     checkout:
-      ref: { branch: main }
+      ref:
+        branch: main
     commit:
       author:
         name: fluxcdbot
@@ -18,7 +19,7 @@ spec:
       messageTemplate: |
         chore(images): update
         {{- range .Updated.Images }}
-        - {{ .Name }}: {{ .OldTag }} -> {{ .NewTag }} ({{ .Digest }})
+        - {{ .Name }} -> {{ .Tag }} ({{ .Digest }})
         {{- end }}
     push:
       branch: main
