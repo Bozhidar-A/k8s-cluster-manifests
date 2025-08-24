@@ -11,7 +11,7 @@ spec:
     branch: main
   secretRef:
     name: flux-system
-  url: ssh://git@github.com/Bozhidar-A/k8s-cluster-manifests
+  url: https://github.com/Bozhidar-A/k8s-cluster-manifests.git
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
