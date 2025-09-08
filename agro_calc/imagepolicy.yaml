@@ -7,6 +7,8 @@ spec:
   imageRepositoryRef:
     name: agro-calc
   filterTags:
-    pattern: "^[0-9a-f]{7}$"
+    pattern: "^docker-publish-run-(?P<num>[0-9]+)$"
+    extract: "$num"
   policy:
-    latest: {}
+    numerical:
+      order: asc # highest run number = newest
