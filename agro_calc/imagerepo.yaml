@@ -6,3 +6,5 @@ metadata:
 spec:
   image: ghcr.io/bozhidar-a/agro_calc
   interval: 1m
+  secretRef:
+    name: ghcr-creds
